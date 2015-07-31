@@ -18,10 +18,10 @@ public class IO {
         return roverPositionAndDirection;
     }
 
-    public String direction()
+    public char acceptDirection()
     {
         Scanner sc = new Scanner(System.in);
-        String direction = sc.nextLine();
+        char direction = sc.next().charAt(0);
         return direction;
     }
 }

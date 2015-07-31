@@ -6,8 +6,10 @@ public class Main {
     {
         IO io = new IO();
         Plateau plateau = new Plateau(io);
-        Rovers rovers = new Rovers(io);
+        RoversPosition rovers = new RoversPosition(io);
         plateau.createPlateau();
-        plateau.createPlateau();
+        rovers.createRoversPositionAndDirection();
+        rovers.createPosition();
+
     }
 }
