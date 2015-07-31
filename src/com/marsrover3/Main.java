@@ -1,15 +1,20 @@
 package com.marsrover3;
 
+import sun.rmi.server.Dispatcher;
+
 public class Main {
 
     public static void main(String args[])
     {
         IO io = new IO();
         Plateau plateau = new Plateau(io);
-        RoversPosition rovers = new RoversPosition(io);
+        RoversPosition roversposition = new RoversPosition(io);
         plateau.createPlateau();
-        rovers.createRoversPositionAndDirection();
-        rovers.createPosition();
+        int[] position = roversposition.createRoversPositionAndDirection();
+        char dir = roversposition.createPosition();
+        MarsRover rovers = new MarsRover(position[0],position[1],dir);
+        rovers.navigateTo("L L R R M");
+
 
     }
 }
