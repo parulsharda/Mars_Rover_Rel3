@@ -10,6 +10,7 @@
         <junit haltonerror="true" haltonfailure="true" printsummary="true">
             <classpath location="lib/junit-4.10.jar" path="antBuild"/>
             <test name="com.marsrover3.PlateauTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.marsrover3.RoversTest" haltonfailure="true" haltonerror="true"/>
         </junit>
     </target>
 
